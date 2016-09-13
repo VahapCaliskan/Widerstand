@@ -27,7 +27,7 @@ namespace Widerstand
             if (!Double.TryParse(sR3, out dR3)) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             dR3 = Double.Parse(sR3);
             if (dR3 <= 1) { Console.WriteLine("Keine Null-Widerstände!\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
-            Console.WriteLine("Gesamtwiderstand: {0}", (1 / (dR1 + dR2)) + (1 / dR3));
+            Console.WriteLine("Gesamtwiderstand: {0}", 1 / ((1 / (dR1 + dR2)) + (1 / dR3)));
             Console.Read();
         }
     }
